@@ -6,7 +6,7 @@ from tkinter import ttk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 class RectaApp:
-    def _init_(self, root):
+    def __init__(self, root):
         self.root = root
         self.root.title("Gráficas de Recta")
         self.root.geometry("800x500")
@@ -85,7 +85,7 @@ class RectaApp:
         except ValueError:
             messagebox.showerror("Error", "Por favor ingresa valores numéricos válidos.")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     root = tk.Tk()
     app = RectaApp(root)
     root.mainloop()
